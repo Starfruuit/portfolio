@@ -1,0 +1,205 @@
+/*
+Student Name: Jacob Bolen
+File Name: stylish.css
+Date: 09/26/2025
+*/
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+h1 {
+  color: #637BF7;
+}
+/* this is where the header starts */
+header {
+  font-size: 10px
+}
+.fren {
+  height: 30em;
+  width: 30em;
+  border-radius: 10%;  
+}
+.tagline {
+  text-align: center;
+  font-family: monospace;
+}
+/* this is where the body starts */
+body {
+  background-color: #4f1aba;
+  background-image: linear-gradient(to bottom right, #5e64ff, #815eff,#a36af7, #a545ff, #321aba, #4f1aba, #4f1aba);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  text-shadow: #090961 0px 0px 20px;
+  font-family: 'Quicksand', monospace;
+  font-size:22px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+a {
+  color:#ffffff;
+  text-decoration: none;
+}
+a:hover {
+  font-weight: bold;
+  text-shadow: 0px, 0px, 5px, purple;
+}
+header a {
+  margin: 20px;
+}
+img {
+  max-width: 85%;
+  display: block;
+}
+/* this is where the main page starts */
+main {
+  animation-name: fade;
+  animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+main p {
+  border-radius: 10px;
+}
+main ul{
+  font-size: 20px; 
+  margin-bottom:30px;
+}
+/* this is where the footer starts */
+footer p {
+  font-size: 18px;
+}
+footer a {
+  font-size: 14px;
+  padding-right: 12%;
+}
+.contact {
+  font-size: 10px;
+}
+/* this is where the navigation starts */
+.navstuff {
+  background-color: #09096176;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #090961;
+  font-size: 3.5em;
+  list-style: none;
+}
+.navstuff li {
+  display: block;
+  text-align: center;
+  padding-right: 1.05em;
+}
+.about2 {
+  align-items: center;
+  display:flex;
+}
+.about {
+  border-radius: 1em;
+  background-image: linear-gradient(to bottom right, #ff8ae6, #ef76bc,#e2598e, #dd4365);
+  text-align: center;
+  border-color: #be4b74;
+  border-style: solid;
+}
+.titletime {
+  text-align: center;
+  border-radius: 1em;
+  background-image: linear-gradient(to bottom right, #ff8ae6, #ef76bc,#e2598e, #dd4365);
+  border-color: #be4b74;
+  border-style: solid;
+}
+#contact {
+  border-radius: 1em;
+  background-image: linear-gradient(to bottom right, #ff8ae6, #ef76bc,#e2598e, #dd4365);
+  text-align: center;
+  border-color: #be4b74;
+  border-style: solid;
+  padding-right: 1em;
+  width: 80%;
+  height: 80%;
+}
+#contact a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  margin-left: 15px
+}
+#contact ul {
+  list-style: none;
+}
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px), print{
+    .navstuff li {
+        display: inline;
+        font-size: 1.25em;
+    }
+    .navstuff li {
+        display: inline-block;
+        font-size: 1em;
+        padding-right: -100%;
+    }
+    .mobile {
+        display: none;
+    }
+    .tab-desk {
+        display: block;
+    }
+}
+/* Media Query for Desktop Viewport */
+#info ul {
+    margin-bottom: 5%;
+}
+@media screen and (min-width: 1000px), print{
+    .navstuff li {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    .navstuff li a {
+        padding-left: 1.5em;
+        padding-right: 0em;
+        padding-bottom: 0.5em;
+        padding-left: 0.5em;
+    }
+    .hover {
+      transition: font-size 1s ease;
+    }
+    .hover:hover {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .hover:not(:hover) {
+      animation-name: nothover;
+      animation-duration:1s;
+      animation-fill-mode:forwards;
+    }
+    .about2 {
+      padding-left: 16%;
+    }
+    .about {
+      width: 80%;
+    }
+}
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px), print{
+    #wrapper {
+        width: 1920px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main {
+        background-color: #f6eee4;
+    }
+}
