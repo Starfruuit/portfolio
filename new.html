@@ -1512,7 +1512,7 @@
 
         function fleeBattle(won = false) {
             const log = document.getElementById('battle-log');
-            if(!won) log.innerHTML = `MC Shurik drops a smoke bomb!<br>Party fled the battle!`;
+            if(!won) log.innerHTML = `Got away safely!`;
             
             document.querySelectorAll('.sprite, .party-sprite').forEach(el => el.classList.remove('active-turn'));
             document.getElementById('turn-indicator').innerText = "";
