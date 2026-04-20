@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melody Fantasy - Magic Forest</title>
+    <title>Music Mayhem</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -640,10 +640,10 @@
     <script>
         // --- GAME DATA & STATE ---
         const partyBase = [
-            { id: 'fighter', name: 'forte', role: ' ', level: 1, baseHp: 450, baseMp: 90, baseAtk: 80, baseDef: 30, baseMag: 10, baseSpd: 35, growth: { hp: 50, mp: 0, atk: 11, def: 5, mag: 1, spd: 2 }, icon: '🎹', sprite: '<img src="images/Forte_MM.png" height=40% width=40%>', spells: [{name: 'Crescendo', cost: 0, type: 'damage', power: 1.2}, { name: "Strong as a Piano", cost: 30, type: 'buff_team_def', power: 1.5 }] },
-            { id: 'mage', name: 'miles', role: ' ', level: 1, baseHp: 220, baseMp: 350, baseAtk: 15, baseDef: 15, baseMag: 60, baseSpd: 45, growth: { hp: 20, mp: 30, atk: 1, def: 2, mag: 8, spd: 4 }, icon: '🎷', sprite: '<img src="images/Miles_MM.png" height=40% width=40%>', spells: [{name: 'Bebop Blast', cost: 20, type: 'damage', power: 2.0}] },
-            { id: 'healer', name: 'clara', role: ' ', level: 1, baseHp: 280, baseMp: 400, baseAtk: 20, baseDef: 20, baseMag: 45, baseSpd: 40, growth: { hp: 25, mp: 40, atk: 2, def: 3, mag: 6, spd: 3 }, icon: '✨', sprite: '<img src="images/Clara_MM.png" height=40% width=40%>', spells: [{name: 'Sonata Strike', cost: 15, type: 'damage', power: 1.5}, {name: 'Healing Melody', cost: 25, type: 'heal', power: 2.5}, {name: 'Restring', cost: 350, type: 'revive', power: 1.8}] },
-            { id: 'ninja', name: 'tyler', role: ' ', level: 1, baseHp: 310, baseMp: 80, baseAtk: 45, baseDef: 25, baseMag: 25, baseSpd: 65, growth: { hp: 30, mp: 5, atk: 6, def: 3, mag: 2, spd: 8 }, icon: '🎤', sprite: '<img src="images/Tyler_MM.png" height=40% width=40%>', spells: [{name: 'Slow Flow', cost: 10, type: 'debuff_spd', power: 1.5}, { name: "Wavedash", cost: 20, type: 'buff_spd', power: 2.0}] }
+            { id: 'fighter', name: 'forte', role: ' ', level: 1, baseHp: 450, baseMp: 30, baseAtk: 80, baseDef: 30, baseMag: 10, baseSpd: 35, growth: { hp: 50, mp: 0, atk: 11, def: 5, mag: 1, spd: 2 }, icon: '🎹', sprite: '<img src="images/Forte_MM.png" height=40% width=40%>', spells: [{ name: "Strong as a Piano", cost: 30, type: 'buff_team_def', power: 1.5 }] },
+            { id: 'mage', name: 'miles', role: ' ', level: 1, baseHp: 220, baseMp: 80, baseAtk: 15, baseDef: 15, baseMag: 60, baseSpd: 45, growth: { hp: 20, mp: 30, atk: 1, def: 2, mag: 8, spd: 4 }, icon: '🎷', sprite: '<img src="images/Miles_MM.png" height=40% width=40%>', spells: [{name: 'Bebop Blast', cost: 40, type: 'damage', power: 2.0}] },
+            { id: 'healer', name: 'clara', role: ' ', level: 1, baseHp: 280, baseMp: 100, baseAtk: 20, baseDef: 20, baseMag: 45, baseSpd: 40, growth: { hp: 25, mp: 40, atk: 2, def: 3, mag: 6, spd: 3 }, icon: '✨', sprite: '<img src="images/Clara_MM.png" height=40% width=40%>', spells: [{name: 'Sonata Strike', cost: 50, type: 'damage', power: 1.5}, {name: 'Healing Melody', cost: 25, type: 'heal', power: 2.5}, {name: 'Restring', cost: 90, type: 'revive', power: 1.8}] },
+            { id: 'ninja', name: 'tyler', role: ' ', level: 1, baseHp: 310, baseMp: 40, baseAtk: 45, baseDef: 25, baseMag: 25, baseSpd: 65, growth: { hp: 30, mp: 5, atk: 6, def: 3, mag: 2, spd: 8 }, icon: '🎤', sprite: '<img src="images/Tyler_MM.png" height=40% width=40%>', spells: [{name: 'Slow Flow', cost: 20, type: 'debuff_spd', power: 1.0}, { name: "Wavedash", cost: 30, type: 'buff_spd', power: 1.5}] }
         ];
 
         let party = [];
