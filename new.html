@@ -1020,9 +1020,17 @@
         function initBattle() {
             const enemiesContainer = document.getElementById('enemies-container');
             enemiesContainer.innerHTML = '';
-            
+
             let currentEnemy = enemiesList[Math.floor(Math.random() * enemiesList.length)];
             const isBossFight = currentEnemy.isBoss;
+            if (currentEnemy.isBoss) {
+                currentEnemy = enemiesList[Math.floor(Math.random() * enemiesList.length)];
+                isBossFight = currentEnemy.isBoss;
+            }
+            if (currentEnemy.isBoss) {
+                currentEnemy = enemiesList[Math.floor(Math.random() * enemiesList.length)];
+                isBossFight = currentEnemy.isBoss;
+            }
             const enemyCount = isBossFight ? 1 : Math.floor(Math.random() * 3) + 1;
             
             // Play appropriate music
@@ -1331,7 +1339,7 @@
                     
                     target.hp -= finalDamage;
                     logMsg = `${current.name} casts ${spell.name} on ${target.name} for ${finalDamage} DMG!${boostText}`;
-                    playAnimation(target.domId, 'anim-damage');
+                    playAnima21tion(target.domId, 'anim-damage');
                 } else if (spell.type === 'debuff_spd') {
                     let baseDrop = getStat(target, 'spd') * spell.power;
                     let finalDrop = Math.floor(baseDrop * powerMultiplier); 
@@ -1393,7 +1401,7 @@
                     
                     target.spd = target.spd + finalBoost;
                     target.mp = Math.min(target.maxMp, target.mp + mpRestore);
-                    logMsg = `${current.name} casts ${spell.name}!<br>${target.name}'s speed increased by ${finalBoost} and MP restored by ${mpRestore}!${boostText}`;
+                    logMsg = `${current.name} casts ${spell.name}!<br>${target.name}'s speed increased by ${finalBoost}!${boostText}`;
                     playAnimation(target.domId, 'anim-heal');
                 } else if (spell.type === 'revive') {
                     let baseHeal = Math.floor(getStat(current, 'mag') * spell.power);
